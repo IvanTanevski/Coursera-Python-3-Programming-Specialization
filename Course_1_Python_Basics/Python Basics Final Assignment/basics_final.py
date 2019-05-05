@@ -70,7 +70,7 @@ print(r_phrase)
 
 inventory = ["shoes, 12, 29.99", "shirts, 20, 9.99", "sweatpants, 25, 15.00", "scarves, 13, 7.75"]
 for item in inventory:
-# Storing every item deteal in own list item_details, and accesing every details to use afterwards in the format statement.
+# Storing every item detail in own list item_details, and accesing every detail to use afterwards in the format statement.
     item_details = item.split(',')                
     itm = item_details[0]
     stock = item_details[1]
