@@ -198,7 +198,7 @@ def get_sorted_recommendations(lst):
         for movie in movie_titles:
             movie_data = get_movie_data(movie)
             movie_ratings[movie] = get_movie_rating(movie_data)
-    # print('Movie ratings:', movie_ratings)  # OPTIONAL TO CHEKC VALUES
+    # print('Movie ratings:', movie_ratings)  # OPTIONAL TO CHECK VALUES
     # Sorted function, movie ratings with - (minus)m descending from biggest and reverse alphabetical
     sorted_movies = sorted(movie_ratings, key=lambda x: -movie_ratings[x]) 
     return sorted_movies   
