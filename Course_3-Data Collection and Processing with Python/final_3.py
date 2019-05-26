@@ -143,7 +143,7 @@ def get_movie_data(title):
 def get_movie_rating(d):
     for dic in d['Ratings']:
         if dic['Source'] == 'Rotten Tomatoes':
-            return int(dic['Value'][:-1])
+            return int(dic['Value'][:-1])          # 97% to int 97
     return 0
         
 # some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
@@ -187,7 +187,7 @@ def get_movie_data(title):
 def get_movie_rating(d):
     for dic in d['Ratings']:
         if dic['Source'] == 'Rotten Tomatoes':
-            return int(dic['Value'][:-1])
+            return int(dic['Value'][:-1])          # 97% to int 97
     return 0
 
 def get_sorted_recommendations(lst):
@@ -198,8 +198,9 @@ def get_sorted_recommendations(lst):
         for movie in movie_titles:
             movie_data = get_movie_data(movie)
             movie_ratings[movie] = get_movie_rating(movie_data)
-    print('Movie ratings:', movie_ratings)
-    sorted_movies = sorted(movie_ratings, key=lambda x: -movie_ratings[x])
+    # print('Movie ratings:', movie_ratings)  # OPTIONAL TO CHEKC VALUES
+    # Sorted function, movie ratings with - (minus)m descending from biggest and reverse alphabetical
+    sorted_movies = sorted(movie_ratings, key=lambda x: -movie_ratings[x]) 
     return sorted_movies   
     
 # some invocations that we use in the automated tests; uncomment these if you are getting errors and want better error messages
